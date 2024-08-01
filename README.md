@@ -1,4 +1,4 @@
-# Targeted Social Media Platform Analysis:Laptop and Mobile Users
+# Targeted Social Media Platform Analysis: Laptop and Mobile Users
 
   This project involves building a classification model to predict weather the product was taken or not. The predictions were seperately made for both Laptop and Mobile Users. The aim of this project
   is to optimize models and create interactive dashboards to visualize trends and specific patterns from the dataset.
@@ -35,8 +35,7 @@
 ## Usage
 
 1. Prepare your dataset: Place your dataset in the data/ directory. Ensure it is named Social+Media+Data+for+DSBA (2).csv or adjust the script accordingly.
-2. Open the Jupyter Notebook:
-   jupyter notebook "SOCIAL_MEDIA_CLASSIFICATION.ipynb"
+2. Open the Jupyter Notebook: jupyter notebook "SOCIAL_MEDIA_CLASSIFICATION.ipynb"
    The script will:
    -Preprocess the raw data
    -Train and evaluate models
@@ -51,42 +50,62 @@
 
 ## Features
    -Data Preprocessing: Handles missing values, normalization, and encoding.
-   -Feature Engineering: Includes permutation importance and feature selection.
-   -Model Training: Utilizes Linear Regression, Random Forest Regressors, XGBoost Regressors, and MLP Regressors.
-   -Model Stacking: Combines models to enhance performance.
-   -Evaluation: Performance metrics and predictions are saved for review.
-
+   -Create different datasets based on two distinct preferred devices 
+   -Identifying Outliers to identify characterestics of the extreme values
+   -Create 3 different preprocessing pipelines for both datasets.
+   -Model Training: Utilizes Logistic Regression, Random Forest Classification, XGBoost , and LGB.
+   -Perform necessary hyperparameter tuning using Grid Search CV.
+   -Model Evaluation using ROC curve and precision-recall curve
+   -Analyse models based on prediction probabilities.
 
 ## Results
-   Baseline Model Performance
-   -------------------------------
-   Linear Regression: R² = 0.930, RMSE = $23,158.28
-   Random Forest Regressor: R² = 0.892, RMSE = $28,791.35
-   XGBoost Regressor: R² = 0.910, RMSE = $26,231.67
-   MLP Regressor: R² = 0.836, RMSE = $35,467.19
-   
-   Hyperparameter Tuned Models
-   --------------------------------
-   Random Forest Regressor (Tuned): R² = 0.884, RMSE = $29,859.67
-   XGBoost Regressor (Tuned): R² = 0.895, RMSE = $28,426.23
-   MLP Regressor (Tuned): R² = 0.931, RMSE = $23,007.31
-   
-   Feature Engineered Dataset-Based Models
-   ----------------------------------------   
-   Random Forest Regressor: R² = 0.879, RMSE = $30,426.10
-   XGBoost Regressor: R² = 0.900, RMSE = $27,676.39
-   MLP Regressor: R² = 0.880, RMSE = $30,304.47
-   
-   Advanced Models
-   ------------------------------------------
-   Voting Regressor: RMSE = $23,136.85, MAE = $14,196.87
-   Stacking Regressor with RF Meta Model: RMSE = $32,355.92, MAE = $16,893.47
-   For detailed metrics, refer to the evaluation_metrics.txt.
-   
-   -Performance Improvement: R2 score improved by 10% through model stacking.
-   -Evaluation Metrics: Detailed in results/evaluation_metrics.txt.
-   -Predictions: Available in results/predictions.csv.
 
+   Model Performance
+   
+   Random Forest Classifier (RF)
+   ------------------------------------
+   Laptop: Best Accuracy of 99.53% and CK Score of 0.9864 using Preprocessing_0.
+   Mobile: Best Accuracy of 98.26% and CK Score of 0.9236 using Preprocessing_0.
+   
+   Logistic Regression (LR)
+   ------------------------------------
+   Laptop: Best Accuracy of 84.76% and CK Score of 0.5052 using Preprocessing_1.
+   Mobile: Best Accuracy of 88.45% and CK Score of 0.3365 using Preprocessing_0.
+   
+   Support Vector Classifier (SVC)
+   ------------------------------------
+   Laptop: Best Accuracy of 90.99% and CK Score of 0.7072 using Preprocessing_0.
+   Mobile: Best Accuracy of 89.44% and CK Score of 0.3727 using Preprocessing_0.
+   
+   XGBoost (XGB)
+   ------------------------------------
+   Laptop: Best Accuracy of 99.53% and CK Score of 0.9866 using Preprocessing_0.
+   Mobile: Best Accuracy of 98.96% and CK Score of 0.9555 using Preprocessing_0.
+   
+   LightGBM (LGB)
+   ------------------------------------
+   Laptop: Perfect Accuracy of 100% with CK Score of 1.000 using both Preprocessing_0 and Preprocessing_1.
+   Mobile: Best Accuracy of 98.11% and CK Score of 0.9177 using Preprocessing_1.
+   
+   Best Performing Models
+   ------------------------------------
+   Overall Best: LightGBM on Laptop with 100% Accuracy and CK Score of 1.000.
+   Best for Mobile: XGBoost with 98.96% Accuracy and CK Score of 0.9555.
+   
+   Cross Validation Scores
+   ------------------------------------
+   Best Mean Accuracy: XGBoost with Mobile Model and Preprocessing_1 (0.9854).
+   Best Mean Accuracy for LightGBM: LightGBM with Laptop Model and Preprocessing_1 (0.9857).
+   
+   Voting Classifier
+   ------------------------------------
+   Best Accuracy Score: XGB with Laptop Model and Soft Voting (0.9906).
+   Best Cohen's Kappa Score: XGB with Laptop Model and Soft Voting (0.9727).
+   
+   Tuned Random Forest Classifier
+   ------------------------------------
+   Laptop Model: Accuracy of 98.58%, Precision 1.0, Recall 0.94, F1 Score 0.9691.
+   Mobile Model: Accuracy of 98.58%, Precision 0.9965, Recall 0.8378, F1 Score 0.9103.
 
 ## License
 
