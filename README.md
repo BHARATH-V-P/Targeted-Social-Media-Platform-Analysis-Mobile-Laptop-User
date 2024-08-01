@@ -1,11 +1,12 @@
 # Targeted Social Media Platform Analysis: Laptop and Mobile Users
 
-  This project involves building a classification model to predict weather the product was taken or not. The predictions were seperately made for both Laptop and Mobile Users. The aim of this project
+  This project involves building a classification model to predict weather the product was taken or not. The predictions were seperately made for both Laptop and 
+  Mobile Users. The aim of this project
   is to optimize models and create interactive dashboards to visualize trends and specific patterns from the dataset.
   
 ## Table of Contents
   
-- [Introduction](#introduction)F
+- [Introduction](#introduction)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
@@ -14,11 +15,7 @@
 
 ## Introduction
 
-   Developing a fine tuned prediction model to determine a customer's decision to purchase a product based on their digital activities from a specific social media platform. The project revolves around a number
-   of variables that are relevant to determining weather the users would be interested in purchasing the product. This targeted marketing is aided by understading the dataset thorugh data visualization using 
-   Power Bi and building models tailored to the behavior of the available raw data. Models used include Logistic Regression, SVC, XGB, Random Forest Classifier and LGB. Key  metrics evaluated to 
-   produce insightful revelations and optimize the model include roc_auc_score, precision_recall_curve behavior and the confusion matrix of individual models. Both the laptop and mobile-based models have achieved
-   an average accuracy of 98% each.
+Developing a fine tuned prediction model to determine a customer's decision to purchase a product based on their digital activities from a specific social media platform. The project revolves around a number of variables that are relevant to determining weather the users would be interested in purchasing the product. This targeted marketing is aided by understading the dataset thorugh data visualization using Power Bi and building models tailored to the behavior of the available raw data. Models used include Logistic Regression, SVC, XGB, Random Forest Classifier and LGB. Key  metrics evaluated to produce insightful revelations and optimize the model include roc_auc_score, precision_recall_curve behavior and the confusion matrix of individual models. Both the laptop and mobile-based models have achieved an average accuracy of 98% each.
    
 ## Installation
 
