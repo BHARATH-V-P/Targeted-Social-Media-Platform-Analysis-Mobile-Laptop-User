@@ -4,44 +4,117 @@
 
 This document provides the evaluation metrics for different models tested with various preprocessing methods and devices. Metrics include Accuracy and CK Score.
 
-## Detailed Metrics
+## Baseline Validation
 
-Device Model    | Preprocessing   | Model | Accuracy | CK Score
-----------------|-----------------|-------|----------|---------
-Laptop_model    | Preprocessing_0 | RF    | 0.990431 | 0.972554
-Laptop_model    | Preprocessing_1 | RF    | 0.990566 | 0.972666
-Mobile_model    | Preprocessing_0 | RF    | 0.981710 | 0.918273
-Mobile_model    | Preprocessing_1 | RF    | 0.983202 | 0.924021
-Laptop_model    | Preprocessing_0 | LR    | 0.846890 | 0.501714
-Laptop_model    | Preprocessing_1 | LR    | 0.849057 | 0.485749
-Mobile_model    | Preprocessing_0 | LR    | 0.885813 | 0.339273
-Mobile_model    | Preprocessing_1 | LR    | 0.882411 | 0.260234
-Laptop_model    | Preprocessing_0 | SVC   | 0.904306 | 0.683237
-Laptop_model    | Preprocessing_1 | SVC   | 0.896226 | 0.652563
-Mobile_model    | Preprocessing_0 | SVC   | 0.895699 | 0.378404
-Mobile_model    | Preprocessing_1 | SVC   | 0.866107 | 0.006348
-Laptop_model    | Preprocessing_0 | XGB   | 0.995215 | 0.986378
-Laptop_model    | Preprocessing_1 | XGB   | 0.985849 | 0.959304
-Mobile_model    | Preprocessing_0 | XGB   | 0.992091 | 0.965916
-Mobile_model    | Preprocessing_1 | XGB   | 0.990613 | 0.958689
-Laptop_model    | Preprocessing_0 | LGB   | 1.000000 | 1.000000
-Laptop_model    | Preprocessing_1 | LGB   | 0.990566 | 0.972666
-Mobile_model    | Preprocessing_0 | LGB   | 0.980227 | 0.913179
-Mobile_model    | Preprocessing_1 | LGB   | 0.979249 | 0.906144
+Device_model    | Preprocessing    | Model    | Accuracy    | CK_score    | TN   | FP  | FN  | TP
+-------------------------------------------------------------------------------------------------
+Laptop_model    | Preprocessing_0  | RF       | 0.995261    | 0.986416    | 163  | 1   | 0   | 47
+Laptop_model    | Preprocessing_1  | RF       | 0.990476    | 0.973384    | 160  | 2   | 0   | 48
+Mobile_model    | Preprocessing_0  | RF       | 0.982647    | 0.923155    | 1738 | 34  | 1   | 244
+Mobile_model    | Preprocessing_1  | RF       | 0.982639    | 0.923646    | 1735 | 34  | 1   | 246
+Laptop_model    | Preprocessing_0  | LR       | 0.838863    | 0.480446    | 154  | 25  | 9   | 23
+Laptop_model    | Preprocessing_1  | LR       | 0.847619    | 0.505155    | 155  | 27  | 5   | 23
+Mobile_model    | Preprocessing_0  | LR       | 0.884482    | 0.336482    | 1711 | 205 | 28  | 73
+Mobile_model    | Preprocessing_1  | LR       | 0.879960    | 0.267899    | 1720 | 226 | 16  | 54
+Laptop_model    | Preprocessing_0  | SVC      | 0.909953    | 0.707223    | 162  | 18  | 1   | 30
+Laptop_model    | Preprocessing_1  | SVC      | 0.895238    | 0.665217    | 159  | 21  | 1   | 29
+Mobile_model    | Preprocessing_0  | SVC      | 0.894398    | 0.372735    | 1729 | 203 | 10  | 75
+Mobile_model    | Preprocessing_1  | SVC      | 0.862599    | 0.018311    | 1736 | 277 | 0   | 3
+Laptop_model    | Preprocessing_0  | XGB      | 0.995261    | 0.986614    | 162  | 0   | 1   | 48
+Laptop_model    | Preprocessing_1  | XGB      | 0.976190    | 0.933921    | 158  | 3   | 2   | 47
+Mobile_model    | Preprocessing_0  | XGB      | 0.989588    | 0.955452    | 1734 | 16  | 5   | 262
+Mobile_model    | Preprocessing_1  | XGB      | 0.989087    | 0.953258    | 1733 | 19  | 3   | 261
+Laptop_model    | Preprocessing_0  | LGB      | 1.000000    | 1.000000    | 163  | 0   | 0   | 48
+Laptop_model    | Preprocessing_1  | LGB      | 1.000000    | 1.000000    | 160  | 0   | 0   | 50
+Mobile_model    | Preprocessing_0  | LGB      | 0.980169    | 0.912594    | 1734 | 35  | 5   | 243
+Mobile_model    | Preprocessing_1  | LGB      | 0.981151    | 0.917749    | 1731 | 33  | 5   | 247
+
 
 ## Summary
 
-- **Best Accuracy**: LGB with Laptop_model and Preprocessing_0 (1.000000)
-- **Best CK Score**: LGB with Laptop_model and Preprocessing_0 (1.000000)
+Random Forest Classifier (RF)
+------------------------------------------------------
+Laptop Model:
+
+Best Accuracy: 99.53% (Preprocessing_0)
+Best CK Score: 0.9864 (Preprocessing_0)
+
+Mobile Model:
+
+Best Accuracy: 98.26% (Preprocessing_0)
+Best CK Score: 0.9236 (Preprocessing_1)
 
 
-# Evaluation Metrics
 
-## Overview
+Logistic Regression (LR)
+------------------------------------------------------
+Laptop Model:
 
-This document provides cross-validation accuracy metrics for different models tested with various preprocessing methods and devices. Metrics include accuracy scores for each fold and the mean accuracy.
+Best Accuracy: 84.76% (Preprocessing_1)
+Best CK Score: 0.5052 (Preprocessing_1)
 
-## Detailed Metrics
+Mobile Model:
+
+Best Accuracy: 88.45% (Preprocessing_0)
+Best CK Score: 0.3365 (Preprocessing_0)
+
+
+
+Support Vector Classifier (SVC)
+-------------------------------------------------------
+
+Laptop Model:
+
+Best Accuracy: 90.99% (Preprocessing_0)
+Best CK Score: 0.7072 (Preprocessing_0)
+
+Mobile Model:
+
+Best Accuracy: 89.44% (Preprocessing_0)
+Best CK Score: 0.3727 (Preprocessing_0)
+
+
+
+
+XGBoost (XGB)
+----------------------------------------------------
+
+Laptop Model:
+
+Best Accuracy: 99.53% (Preprocessing_0)
+Best CK Score: 0.9866 (Preprocessing_0)
+
+Mobile Model:
+
+Best Accuracy: 98.96% (Preprocessing_0)
+Best CK Score: 0.9555 (Preprocessing_0)
+
+
+
+LightGBM (LGB)
+-------------------------------------------------------
+
+Laptop Model:
+
+Best Accuracy: 100.00% (Preprocessing_0 and Preprocessing_1)
+Best CK Score: 1.0000 (Preprocessing_0 and Preprocessing_1)
+
+Mobile Model:
+
+Best Accuracy: 98.11% (Preprocessing_1)
+Best CK Score: 0.9177 (Preprocessing_1)
+
+
+
+Best Performing Models
+------------------------------------------------------------------
+
+Overall Best Model: LightGBM on Laptop with Preprocessing_0 and Preprocessing_1, achieving an accuracy of 100% and a CK score of 1.000.
+Best Model for Mobile: XGBoost with Preprocessing_0, achieving an accuracy of 98.96% and a CK score of 0.9555.
+
+
+
+## Cross Validation Scores of best performing baseline models based on Accuracy
 
 Device Model    | Preprocessing   | Model | CV Accuracy 0 | CV Accuracy 1 | CV Accuracy 2 | CV Accuracy 3 | CV Accuracy 4 | Mean Accuracy
 ----------------|-----------------|-------|---------------|---------------|---------------|---------------|---------------|---------------
@@ -61,11 +134,7 @@ Mobile_model    | Preprocessing_1 | LGB   | 0.975911      | 0.972823      | 0.97
 
 
 
-## Overview
-
-This document provides cross-validation Cohen's Kappa metrics for different models tested with various preprocessing methods and devices. Metrics include Cohen's Kappa scores for each fold and the mean score.
-
-## Detailed Metrics
+## Cross Validation Scores of best performing baseline models based on Cohen Kappa Score
 
 Device Model    | Preprocessing   | Model | CV Cohen's Score 0 | CV Cohen's Score 1 | CV Cohen's Score 2 | CV Cohen's Score 3 | CV Cohen's Score 4 | Mean Cohen's Score
 ----------------|-----------------|-------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------
@@ -78,19 +147,12 @@ Laptop_model    | Preprocessing_1 | LGB   | 0.984031           | 0.936508       
 Mobile_model    | Preprocessing_0 | LGB   | 0.866988           | 0.855218           | 0.906842           | 0.923029           | 0.908757           | 0.892167
 Mobile_model    | Preprocessing_1 | LGB   | 0.900392           | 0.888217           | 0.879959           | 0.922750           | 0.896760           | 0.897615
 
-## Summary
 
 - **Best Mean Cohen's Score**: LGB with Laptop_model and Preprocessing_1 (0.961498)
 - **Best Mean Cohen's Score for XGB**: XGB with Mobile_model and Preprocessing_1 (0.941916)
 
 
-# Evaluation Metrics
-
-## Overview
-
-This section details the performance metrics of different voting strategies applied to various models. Metrics include accuracy score, Cohen's Kappa score, and log loss where applicable.
-
-## Detailed Metrics
+## Voting Classifier Model Performance using XGB Clasisfier, LGB Classifier and Random Forest Classifier
 
 Model           | ML Model | Voting Type | Accuracy Score | Cohen Scores 
 ----------------|----------|-------------|----------------|--------------
@@ -105,3 +167,32 @@ Mobile_model    | LGB      | Soft        | 0.989625       | 0.954195
 - **Best Cohen's Kappa Score**: XGB with Laptop_model and Soft Voting (0.972666)
 - **Lowest Log Loss**: LGB with Mobile_model and Soft Voting (0.065602)
 
+## Cross validation scores of the Voting Classifier model
+-------------------------------------------------------------
+
+Voting Classifier Laptop-- [0.95857988 0.93452381 0.9047619  0.95238095 0.92261905]
+Voting Classifier Laptop- MEAN 0.9345731191885038
+
+Voting Classifier Mobile-- [0.97467573 0.94008647 0.9715874  0.95676343 0.96602841]
+Voting Classifier Mobile- MEAN 0.9618282890673255
+
+Tuned Random Forest Classifier
+-------------------------------------------------------------------------------------
+
+Laptop Model
+---------------------
+Performance Metrics:
+
+Accuracy: 0.9858
+Precision: 1.0
+Recall: 0.94
+F1 Score: 0.9691
+
+Mobile Model
+-------------------------
+Performance Metrics:
+
+Accuracy: 0.9858
+Precision: 0.9965
+Recall: 0.8378
+F1 Score: 0.9103
