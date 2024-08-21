@@ -32,7 +32,7 @@ Developing a fine tuned prediction model to determine a customer's decision to p
 ## Usage
 
 1. Prepare your dataset: Place your dataset in the data/ directory. Ensure it is named Social+Media+Data+for+DSBA (2).csv or adjust the script accordingly.
-2. Open the Jupyter Notebook: jupyter notebook "SOCIAL_MEDIA_CLASSIFICATION.ipynb"
+2. Open the Jupyter Notebook: jupyter notebook "SOCIAL_MEDIA_CLASSIFICATION_MODEL.ipynb"
    The script will:
    -Preprocess the raw data
    -Train and evaluate models
