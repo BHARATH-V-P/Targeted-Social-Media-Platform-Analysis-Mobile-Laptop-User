@@ -96,8 +96,8 @@ Developing a fine tuned prediction model to determine a customer's decision to p
    
    Voting Classifier
    ------------------------------------
-   Best Accuracy Score: XGB with Laptop Model and Soft Voting (0.9906).
-   Best Cohen's Kappa Score: XGB with Laptop Model and Soft Voting (0.9727).
+   Best Laptop Model Score: 0.985714 with soft voting.
+   Best Mobile Model Score: 0.99 with soft voting.
    
    Tuned Random Forest Classifier
    ------------------------------------
