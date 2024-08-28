@@ -57,52 +57,25 @@ Developing a fine tuned prediction model to determine a customer's decision to p
 
 ## Results
 
-   Model Performance
-   
-   Random Forest Classifier (RF)
-   ------------------------------------
-   Laptop: Best Accuracy of 99.53% and CK Score of 0.9864 using Preprocessing_0.
-   Mobile: Best Accuracy of 98.26% and CK Score of 0.9236 using Preprocessing_0.
-   
-   Logistic Regression (LR)
-   ------------------------------------
-   Laptop: Best Accuracy of 84.76% and CK Score of 0.5052 using Preprocessing_1.
-   Mobile: Best Accuracy of 88.45% and CK Score of 0.3365 using Preprocessing_0.
-   
-   Support Vector Classifier (SVC)
-   ------------------------------------
-   Laptop: Best Accuracy of 90.99% and CK Score of 0.7072 using Preprocessing_0.
-   Mobile: Best Accuracy of 89.44% and CK Score of 0.3727 using Preprocessing_0.
-   
-   XGBoost (XGB)
-   ------------------------------------
-   Laptop: Best Accuracy of 99.53% and CK Score of 0.9866 using Preprocessing_0.
-   Mobile: Best Accuracy of 98.96% and CK Score of 0.9555 using Preprocessing_0.
-   
-   LightGBM (LGB)
-   ------------------------------------
-   Laptop: Perfect Accuracy of 100% with CK Score of 1.000 using both Preprocessing_0 and Preprocessing_1.
-   Mobile: Best Accuracy of 98.11% and CK Score of 0.9177 using Preprocessing_1.
-   
-   Best Performing Models
-   ------------------------------------
-   Overall Best: LightGBM on Laptop with 100% Accuracy and CK Score of 1.000.
-   Best for Mobile: XGBoost with 98.96% Accuracy and CK Score of 0.9555.
-   
-   Cross Validation Scores
-   ------------------------------------
-   Best Mean Accuracy: XGBoost with Mobile Model and Preprocessing_1 (0.9854).
-   Best Mean Accuracy for LightGBM: LightGBM with Laptop Model and Preprocessing_1 (0.9857).
-   
-   Voting Classifier
-   ------------------------------------
-   Best Laptop Model Score: 0.985714 with soft voting.
-   Best Mobile Model Score: 0.99 with soft voting.
-   
-   Tuned Random Forest Classifier
-   ------------------------------------
-   Laptop Model: Accuracy of 98.58%, Precision 1.0, Recall 0.94, F1 Score 0.9691.
-   Mobile Model: Accuracy of 98.58%, Precision 0.9965, Recall 0.8378, F1 Score 0.9103.
+  - Best Performing Models:
+
+  - Overall Best Model: LightGBM on Laptop with Preprocessing_0 and Preprocessing_1, achieving an accuracy of 100% and a CK score of 1.000.
+    - Best Model for Mobile: XGBoost with Preprocessing_0, achieving an accuracy of 98.96% and a CK score of 0.9555.
+    
+  - Cross-Validation Scores:
+
+    - Best Mean Accuracy: XGB with Mobile_model and Preprocessing_1 (0.985423).
+    - Best Mean Cohen's Score: LGB with Laptop_model and Preprocessing_1 (0.961498).
+    
+  - Tuned Random Forest Classifier Performance:
+
+    - Laptop Model: High precision (1.0) with balanced recall and F1 score.
+    - Mobile Model: Slightly lower recall compared to precision but still good overall performance.
+    
+  - Voting Classifier Performance:
+
+    - Best Accuracy: XGB with Laptop_model and Soft Voting (0.990566).
+    -  Best Cohen's Kappa Score: Also XGB with Laptop_model and Soft Voting (0.972666)..
 
 ## License
 
