@@ -152,6 +152,28 @@ Mobile_model    | Preprocessing_1 | LGB   | 0.900392           | 0.888217       
 - **Best Mean Cohen's Score for XGB**: XGB with Mobile_model and Preprocessing_1 (0.941916)
 
 
+## Tuned Random Forest Classifier
+-------------------------------------------------------------------------------------
+
+Laptop Model
+---------------------
+Performance Metrics:
+
+Accuracy: 0.9858
+Precision: 1.0
+Recall: 0.94
+F1 Score: 0.9691
+
+Mobile Model
+-------------------------
+Performance Metrics:
+
+Accuracy: 0.9858
+Precision: 0.9965
+Recall: 0.8378
+F1 Score: 0.9103
+
+
 ## Voting Classifier Model Performance using XGB Clasisfier, LGB Classifier and Random Forest Classifier
 
 Model           | ML Model | Voting Type | Accuracy Score | Cohen Scores 
@@ -175,24 +197,3 @@ Voting Classifier Laptop- MEAN 0.9345731191885038
 
 Voting Classifier Mobile-- [0.97467573 0.94008647 0.9715874  0.95676343 0.96602841]
 Voting Classifier Mobile- MEAN 0.9618282890673255
-
-Tuned Random Forest Classifier
--------------------------------------------------------------------------------------
-
-Laptop Model
----------------------
-Performance Metrics:
-
-Accuracy: 0.9858
-Precision: 1.0
-Recall: 0.94
-F1 Score: 0.9691
-
-Mobile Model
--------------------------
-Performance Metrics:
-
-Accuracy: 0.9858
-Precision: 0.9965
-Recall: 0.8378
-F1 Score: 0.9103
