@@ -1,8 +1,6 @@
 # Targeted Social Media Platform Analysis: Laptop and Mobile Users
 
-  This project involves developing a well tuned classification model that predicts whether a certain consumer has purchased the product in question or not. These 
-  independent variables are related to factors such as empoyement, the user's social media engagement, the extent of their active role mainly defined by their   
-  habits and behaviors such as commenting and liking a particular post on the media platform making their stand on the product noticable.
+  This project involves developing a well tuned classification model that predicts whether a certain consumer has purchased the product in question or not. These    independent variables are related to factors such as empoyement, the user's social media engagement, the extent of their active role mainly defined by their       habits and behaviors such as commenting and liking a particular post on the media platform making their stand on the product noticable.
 
 
   
@@ -36,23 +34,26 @@ Developing a fine tuned prediction model to determine a customer's decision to p
 1. Prepare your dataset: Place your dataset in the data/ directory. Ensure it is named Social+Media+Data+for+DSBA (2).csv or adjust the script accordingly.
 2. Open the Jupyter Notebook: jupyter notebook "SOCIAL_MEDIA_CLASSIFICATION_MODEL.ipynb"
    The script will:
-   - Preprocess the raw data
-   - Train and evaluate models
-   - Perform neccessary feature engineering
-   - Perform Hyperparameter tuning
-   - Evaluate different models based on specific preprocessing done prior to model training.
+   - Data Preprocessing: Handles missing values, normalization and encoding of all predictors as needed.
+   - Perform EDA neccessary for optimum model training.
+   - Keep track on performance improvements upon specific preprocessing technique used.
+   - Feature Engineering: Includes permutation importance and feature selection.
+   - Model Training: Utilizes Random Forest Classifier, SVC, Logistic Regression, XGB and LGB.
+   - Voting Classifier Combines models to enhance overall performance.
+   - Save results in the results/ directory.
    - Keep track of specific KPI metrics such as precision_recall curve and rov_curves to understand model behavior for specific preprocessed datasets
-3. Review the results:
+4. Review the results:
    Evaluation Metrics: Found in results/evaluation_metrics.txt
    Predictions: Found in results/predictions.csv
 
 
 ## Features
+
    - Data Preprocessing: Handles missing values, normalization, and encoding.
-   - Create different datasets based on two distinct preferred devices 
+   - Create different datasets based on two distinct preferred devices, mobile and laptop device, 
    - Identifying Outliers to identify characterestics of the extreme values
    - Create 3 different preprocessing pipelines for both datasets.
-   - Model Training: Utilizes Logistic Regression, Random Forest Classification, XGBoost , and LGB.
+   - Model Training: Utilizes Logistic Regression, Random Forest Classification, XGBoost and LGB.
    - Perform necessary hyperparameter tuning using Grid Search CV.
    - Model Evaluation using ROC curve and precision-recall curve
    - Analyse models based on prediction probabilities.
