@@ -59,7 +59,7 @@ Developing a fine tuned prediction model to determine a customer's decision to p
 
   - Best Performing Models:
 
-  - Overall Best Model: LightGBM on Laptop with Preprocessing_0 and Preprocessing_1, achieving an accuracy of 100% and a CK score of 1.000.
+    - Overall Best Model: LightGBM on Laptop with Preprocessing_0 and Preprocessing_1, achieving an accuracy of 100% and a CK score of 1.000.
     - Best Model for Mobile: XGBoost with Preprocessing_0, achieving an accuracy of 98.96% and a CK score of 0.9555.
     
   - Cross-Validation Scores:
