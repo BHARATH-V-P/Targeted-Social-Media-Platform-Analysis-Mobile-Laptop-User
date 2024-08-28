@@ -34,26 +34,26 @@ Developing a fine tuned prediction model to determine a customer's decision to p
 1. Prepare your dataset: Place your dataset in the data/ directory. Ensure it is named Social+Media+Data+for+DSBA (2).csv or adjust the script accordingly.
 2. Open the Jupyter Notebook: jupyter notebook "SOCIAL_MEDIA_CLASSIFICATION_MODEL.ipynb"
    The script will:
-   -Preprocess the raw data
-   -Train and evaluate models
-   -Perform neccessary feature engineering
-   -Perform Hyperparameter tuning
-   -Evaluate different models based on specific preprocessing done prior to model training.
-   -Keep track of specific KPI metrics such as precision_recall curve and rov_curves to understand model behavior for specific preprocessed datasets
+   - Preprocess the raw data
+   - Train and evaluate models
+   - Perform neccessary feature engineering
+   - Perform Hyperparameter tuning
+   - Evaluate different models based on specific preprocessing done prior to model training.
+   - Keep track of specific KPI metrics such as precision_recall curve and rov_curves to understand model behavior for specific preprocessed datasets
 3. Review the results:
    Evaluation Metrics: Found in results/evaluation_metrics.txt
    Predictions: Found in results/predictions.csv
 
 
 ## Features
-   -Data Preprocessing: Handles missing values, normalization, and encoding.
-   -Create different datasets based on two distinct preferred devices 
-   -Identifying Outliers to identify characterestics of the extreme values
-   -Create 3 different preprocessing pipelines for both datasets.
-   -Model Training: Utilizes Logistic Regression, Random Forest Classification, XGBoost , and LGB.
-   -Perform necessary hyperparameter tuning using Grid Search CV.
-   -Model Evaluation using ROC curve and precision-recall curve
-   -Analyse models based on prediction probabilities.
+   - Data Preprocessing: Handles missing values, normalization, and encoding.
+   - Create different datasets based on two distinct preferred devices 
+   - Identifying Outliers to identify characterestics of the extreme values
+   - Create 3 different preprocessing pipelines for both datasets.
+   - Model Training: Utilizes Logistic Regression, Random Forest Classification, XGBoost , and LGB.
+   - Perform necessary hyperparameter tuning using Grid Search CV.
+   - Model Evaluation using ROC curve and precision-recall curve
+   - Analyse models based on prediction probabilities.
 
 ## Results
 
